@@ -2,4 +2,8 @@ baseURL = 'https://example.org/'
 locale = 'en-us'
 title = 'My New Hugo Project'
 theme = 'introduction'
-DefaultContentLanguage = "de"       
+DefaultContentLanguage = "de"
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
