@@ -51,6 +51,9 @@ jobs:
         working-directory: themes/introduction
         run: npm ci
 
+      - name: Add theme Node binaries to PATH
+        run: echo "$GITHUB_WORKSPACE/themes/introduction/node_modules/.bin" >> "$GITHUB_PATH"
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
