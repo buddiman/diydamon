@@ -65,12 +65,12 @@ jobs:
           echo "Installing Dart Sass ${DART_SASS_VERSION}..."
 
           curl -sfL \
-            --output-dir "${{ runner.temp }}" \
-            -O "https://github.com/sass/dart-sass/releases/download/${DART_SASS_VERSION}/dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz"
+            -o "${{ runner.temp }}/dart-sass.tar.gz" \
+            "https://github.com/sass/dart-sass/releases/download/${DART_SASS_VERSION}/dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz"
 
           tar \
             -C "${HOME}/.local" \
-            -xf "${{ runner.temp }}/dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz"
+            -xzf "${{ runner.temp }}/dart-sass.tar.gz"
 
           echo "${HOME}/.local/dart-sass" >> "${GITHUB_PATH}"
 
@@ -100,20 +100,26 @@ jobs:
         run: |
           echo "Logging tool versions..."
 
+          echo "Hugo path:"
+          command -v hugo
+
+          echo "Hugo version:"
+          hugo version
+
+          echo "Dart Sass:"
           command -v sass &> /dev/null \
-            && echo "Dart Sass: $(sass --version)" \
-            || echo "Dart Sass: not installed"
+            && sass --version \
+            || echo "not installed"
 
+          echo "Go:"
           command -v go &> /dev/null \
-            && echo "Go: $(go version)" \
-            || echo "Go: not installed"
+            && go version \
+            || echo "not installed"
 
-          echo "Hugo path: $(command -v hugo)"
-          echo "Hugo version: $(hugo version)"
-
+          echo "Node.js:"
           command -v node &> /dev/null \
-            && echo "Node.js: $(node --version)" \
-            || echo "Node.js: not installed"
+            && node --version \
+            || echo "not installed"
 
       - name: Configure Git
         run: |
