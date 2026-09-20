@@ -1,6 +1,6 @@
 ---
-title: "Damons Elektronik Basteleien"
+title: "Damons Elektronik Werkstatt"
 draft: false
 weight: 0
 ---
-Damons Projekte Elektronik zu zerlegen, reparieren, dokumentieren und eventuell auch zerstören!
+Hier stelle ich meine Projekte vor, Elektronik zu zerlegen, reparieren, dokumentieren und eventuell auch zu zerstören!
