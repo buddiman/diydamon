@@ -3,7 +3,6 @@ locale = 'de-de'
 title = 'Damons Elektro Werkstatt'
 theme = 'introduction'
 defaultContentLanguage = 'de'
-locale = 'de'
 
 [caches]
   [caches.images]
