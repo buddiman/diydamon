@@ -1,5 +1,6 @@
-baseURL = 'https://example.org/'
-title = 'Damons Elektronik Basteleien'
+baseURL = "https://buddiman.github.io/diydamon/"
+locale = 'de-de'
+title = 'Damons Elektro Werkstatt'
 theme = 'introduction'
 defaultContentLanguage = 'de'
 locale = 'de'
@@ -9,12 +10,14 @@ locale = 'de'
     dir = ':cacheDir/images'
 
 [params]
-  themeStyle = 'dark'
-  customCSS = ['custom.css']
-  dateFormat = '2. January 2006'
-  description = 'Damons Projekte: Elektronik zerlegen, reparieren und dokumentieren'
+    themeStyle                   = "dark"
 
-  [params.home]
-    timeFormat = 'de-DE'
-    timeZone = 'Europe/Berlin'
-    showLatest = true
+    [params.home]
+        introHeight              = "medium"            # Input either "medium" or "large" or "fullheight"
+        showLatest               = true                    # Show latest blog post summary
+        showAllPosts             = false                   # Set true to list all posts on home page, or set false to link to separate blog list page
+        allPostsArchiveFormat    = true                    # show all posts in an archive format
+        # numberOfProjectsToShow   = 3                       # Maximum number of projects to show on home page. Unset or comment out to show all projects
+        localTime                = true                    # Show your current local time in contact section
+        timeZone                 = "Europe/Berlin"   # Your timezone as in the TZ* column of this list: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+        timeFormat               = "de-DE"                 # Language specific format to use

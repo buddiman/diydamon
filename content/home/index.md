@@ -1,5 +1,5 @@
 ---
-title: "Damons Elektronik Basteleien"
+title: "Damons Elektronik Werkstatt"
 draft: false
 weight: 0
 ---
