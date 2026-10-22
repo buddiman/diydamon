@@ -1,0 +1,23 @@
+/* Dark mode: the theme's table colors are light-only, which leaves white text on light grey */
+.markdown table,
+.markdown td,
+.markdown th {
+    border-color: #444;
+}
+.markdown td,
+.markdown th {
+    background-color: #2b2b2b;
+    color: #efefef;
+}
+.markdown tbody tr:nth-child(even) td,
+.markdown tbody tr:nth-child(even) th {
+    background-color: #2b2b2b;
+}
+.markdown tbody tr:nth-child(odd) td,
+.markdown tbody tr:nth-child(odd) th {
+    background-color: #333;
+}
+.markdown thead th {
+    background-color: #1a1a1a;
+    color: #00b8d4;
+}

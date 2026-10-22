@@ -1,7 +1,7 @@
 ---
 title: "Projekte" # Title of your project
 date: 2026-09-18T16:28:06+02:00
-weight: 0 # Order in which to show this project on the home page
+weight: 2 # Order in which to show this project on the home page
 external_link: "" # Optional external link instead of modal
 resources:
     - src: plant.jpg
